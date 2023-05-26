@@ -1,0 +1,6 @@
+@use "variaveis";
+footer {
+  text-align: center;
+  font-style: italic;
+  color: variaveis.$corTextoPrincipal;
+}

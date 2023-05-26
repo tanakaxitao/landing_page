@@ -1,0 +1,107 @@
+@use "header";
+@use "body";
+@use "social-links";
+@use "footer";
+@use "card";
+@use "faq";
+@use "variaveis";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  color: variaveis.$corTextoPrincipal;
+}
+
+p {
+  color: variaveis.$corTextoPrincipal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+h2 {
+  font-size: 28px;
+  color: variaveis.$corTextoPrincipal;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  &__content__container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__img {
+      width: 20em;
+      margin: 3em 0;
+      @media (max-width: 768px) {
+        width: 10em;
+      }
+    }
+    h1 {
+      font-size: 128px;
+      display: flex;
+      flex-direction: column;
+      line-height: 112px;
+      color: variaveis.$corTextoPrincipal;
+
+      span {
+        font-size: 80px;
+        font-weight: 200;
+        transform: translateY(30px);
+      }
+      @media (max-width: 768px) {
+        font-size: 60px;
+      }
+    }
+  }
+  .movie__title {
+    font-size: 2.6rem;
+    color: variaveis.$red;
+    transform: translateY(-10px);
+
+    @media (max-width: 768px) {
+      font-size: 2.3rem;
+    }
+  }
+  .movie__text {
+    font-size: 1.2rem;
+    width: 600px;
+    font-weight: 100;
+    @media (max-width: 768px) {
+      width: 300px;
+    }
+  }
+  .movie__btn {
+    height: 80px;
+    width: 300px;
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 200;
+    border-radius: 10px;
+    background-color: variaveis.$red;
+    gap: 8px;
+    @media (max-width: 768px) {
+      width: 250px;
+    }
+
+    &:hover {
+      background-color: transparent;
+      transition: all 0.8s;
+    }
+
+    &__image {
+      width: 38px;
+    }
+  }
+}

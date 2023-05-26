@@ -1,0 +1,55 @@
+@use "variaveis";
+.header {
+  display: flex;
+  justify-content: space-between;
+  &__logo {
+    width: 150px;
+  }
+  &__navegation {
+    &__search {
+      width: 22px;
+      cursor: pointer;
+      filter: invert(1);
+    }
+    &__links {
+      display: flex;
+      gap: 32px;
+      @media (max-width: 768px) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 65px;
+        font-size: 2.5rem;
+        background-color: #000;
+        transform: translateX(100%);
+        opacity: 1;
+        z-index: 1;
+        transition: all 8s;
+
+        .menu-burger-container.active ~ &__links {
+          opacity: 10;
+          transform: translateX(100%);
+          background-color: rgb(243, 242, 242);
+        }
+      }
+
+      &__item {
+        a {
+          text-shadow: 2px 2px 2px black;
+          padding: 6px;
+          transition: all 1s;
+
+          &:hover {
+            background-color: variaveis.$red;
+            transition: all 0.6s;
+          }
+        }
+      }
+    }
+  }
+}

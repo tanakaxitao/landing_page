@@ -1,0 +1,55 @@
+.card {
+  margin-top: 160px;
+  margin-left: 60px;
+  background: linear-gradient(190deg, red, #000d 20%, #000),
+    url("https://static.toiimg.com/photo/msid-88521380/88521380.jpg");
+  width: 600px;
+  padding-bottom: 20px;
+  @media (max-width: 768px) {
+    margin: auto;
+    margin-top: 200px;
+    width: 400px;
+  }
+
+  &__content {
+    h1 {
+      font-family: "Audiowide", cursive;
+      font-size: 26px;
+      text-align: center;
+      color: #635353;
+      padding-top: 30px;
+    }
+    &__text {
+      color: darkgrey;
+      font-size: 18px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+  &__fotos {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  .fotos {
+    background-color: rgb(0, 0, 0, 0.6);
+    border-radius: 10px;
+    img {
+      border-top-right-radius: 10px;
+      border-top: 10px;
+      @media (max-width: 768px) {
+        max-width: 100%;
+      }
+    }
+    h3 {
+      text-align: center;
+      color: aliceblue;
+      font-size: 16px;
+      margin-top: 8px;
+      margin-bottom: 5px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@use "variaveis";
+body {
+  position: relative;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(190deg, red, #000d 20%, #000),
+    url("https://rafasgeek.com.br/wp-content/uploads/2021/12/Classificado-antes-do-No-Way-Home.jpg");
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 128px 50px 128px;
+  animation: zoom 1.5s alternate;
+  @media (max-width: 768px) {
+    background-image: li
+      url("https://rafasgeek.com.br/wp-content/uploads/2021/12/Classificado-antes-do-No-Way-Home.jpg");
+    background-color: variaveis.$corDeFundo;
+    padding: 30px 30px 25px 30px;
+    overflow-x: hidden;
+  }
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

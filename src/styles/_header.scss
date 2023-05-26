@@ -30,12 +30,6 @@
         opacity: 1;
         z-index: 1;
         transition: all 8s;
-
-        .menu-burger-container.active ~ &__links {
-          opacity: 10;
-          transform: translateX(100%);
-          background-color: rgb(243, 242, 242);
-        }
       }
 
       &__item {
